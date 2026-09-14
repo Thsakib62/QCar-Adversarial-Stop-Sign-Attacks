@@ -1,0 +1,11 @@
+# Documentation-only review-stage allowlist.
+# Update this policy as part of the separately reviewed post-acceptance release.
+*
+!.gitignore
+!README.md
+!REPRODUCIBILITY.md
+!SOFTWARE_ENVIRONMENT.md
+!ARTIFACT_AVAILABILITY.md
+!CITATION.cff
+!PREUPLOAD_CHECKLIST.md
+!RELEASE_MANIFEST.txt

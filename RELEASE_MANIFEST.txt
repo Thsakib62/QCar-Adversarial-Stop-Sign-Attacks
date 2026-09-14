@@ -1,0 +1,36 @@
+REVIEW-STAGE RELEASE MANIFEST
+=============================
+
+Scope: Documentation-only snapshot associated with the manuscript under review.
+
+Files approved for inclusion
+----------------------------
+
+README.md
+  Repository landing page with the manuscript title, project overview, disclosed hardware and software summary, documentation links, and review-stage availability statement.
+
+REPRODUCIBILITY.md
+  Summary of the physical platform, runtime rates, trial organization, training configuration, statistical procedures, held-out evaluation terminology, and Figure 9 interpretation.
+
+SOFTWARE_ENVIRONMENT.md
+  Version table distinguishing the onboard QCar deployment environment, manuscript-reported training environment, and unspecified offline-analysis environment.
+
+ARTIFACT_AVAILABILITY.md
+  Neutral statement defining the documentation-only review-stage scope and planned post-acceptance artifact release.
+
+CITATION.cff
+  Citation metadata for the associated manuscript and repository without an unverified DOI.
+
+.gitignore
+  Documentation-only allowlist that prevents accidental staging of unapproved artifact types in this review-stage snapshot.
+
+PREUPLOAD_CHECKLIST.md
+  Upload gate, completed leakage checks, unresolved manuscript/artifact inconsistencies, and required author verification items.
+
+RELEASE_MANIFEST.txt
+  Complete list of files in the review-stage upload package and the purpose of each file.
+
+Explicit exclusions
+-------------------
+
+No source code, research scripts, datasets, annotations, experimental records, model files, training or evaluation outputs, statistical-analysis assets, logs, images, videos, archives, machine-specific paths, credentials, or license grants are included.
