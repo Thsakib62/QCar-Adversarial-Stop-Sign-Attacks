@@ -37,14 +37,14 @@ This review-stage documentation does not reproduce the manuscript's numerical ou
 
 ## Dataset and Training Summary
 
-The following values reproduce the manuscript-reported dataset and training description. Dataset-total verification remains listed in [`PREUPLOAD_CHECKLIST.md`](PREUPLOAD_CHECKLIST.md):
+The checkpoint-associated fine-tuning corpus used for the reported YOLOv5n training run comprised:
 
-- 350 camera images at 640 × 640 resolution
-- 1,092 bounding-box annotations
+- 306 camera images at 640 × 640 resolution
+- 964 bounding-box annotations
 - Five classes: stop sign, traffic light, car, and two obstacle classes
-- 480 stop-sign instances, comprising 175 clean and 305 adversarial instances
+- 422 stop-sign instances, comprising 153 clean and 269 adversarial instances
 - Adversarial training exemplars corresponding to Lu3, Eykholt1, and Eykholt2, labeled as the stop-sign class
-- 80% training and 20% validation split
+- 244 training images and 62 model-selection validation images, corresponding to an approximately 80%/20% split
 - COCO-pretrained YOLOv5n initialization
 - 100 training epochs
 - Batch size 8
@@ -54,6 +54,8 @@ The following values reproduce the manuscript-reported dataset and training desc
 - Detection head updated during fine-tuning
 
 The training description consistently uses the saved configuration: frozen backbone layers 0–9 with detection-head updating.
+
+A separate post-training, range-separated held-out collection contains 41 images, 118 annotated objects, and 54 attacked stop-sign annotations. These held-out images are not counted as part of the fine-tuning corpus.
 
 ### Manuscript-Reported Augmentation Configuration
 

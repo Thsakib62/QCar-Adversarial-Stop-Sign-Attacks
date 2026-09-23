@@ -43,8 +43,6 @@ The manuscript reports deployment of trained YOLOv5n models exported to TensorRT
 - [Reproducibility summary](REPRODUCIBILITY.md)
 - [Software environment](SOFTWARE_ENVIRONMENT.md)
 - [Artifact availability](ARTIFACT_AVAILABILITY.md)
-- [Pre-upload verification items](PREUPLOAD_CHECKLIST.md)
-- [Review-stage release manifest](RELEASE_MANIFEST.txt)
 
 ## Artifact Availability
 
