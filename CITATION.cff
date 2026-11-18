@@ -1,19 +1,19 @@
 cff-version: 1.2.0
-message: "Please cite the associated manuscript after its final bibliographic record becomes available."
-title: "Review-stage documentation for Vulnerability Assessment of Adversarial Image Attacks in a Miniaturized Autonomous Vehicle Testbed without Relying on Way-Point Information"
+message: "If you use this artifact, please cite the associated IEEE Access paper."
+title: "QCar Physical Adversarial Stop-Sign Evaluation Reproducibility Artifact"
 type: software
 authors:
-  - given-names: "Tahmid Hasan"
-    family-names: "Sakib"
-  - given-names: "Abhijeet"
-    family-names: "Solanki"
-  - given-names: "Wesam"
-    family-names: "Al Amiri"
-  - given-names: "Syed Rafay"
-    family-names: "Hasan"
-  - given-names: "Syed Ali Asad"
-    family-names: "Rizvi"
-  - given-names: "Terry N"
-    family-names: "Guo"
+  - family-names: Sakib
+    given-names: Tahmid Hasan
+  - family-names: Solanki
+    given-names: Abhijeet
+  - family-names: Al Amiri
+    given-names: Wesam
+  - family-names: Hasan
+    given-names: Syed Rafay
+  - family-names: Rizvi
+    given-names: Syed Ali Asad
+  - family-names: Guo
+    given-names: Terry N
 repository-code: "https://github.com/Thsakib62/QCar-Adversarial-Stop-Sign-Attacks"
-abstract: "Documentation-only review-stage repository for an IEEE Access manuscript concerning physically realized adversarial stop-sign evaluation on a Quanser QCar testbed. Research implementation and experimental artifacts are not included in this snapshot."
+version: "1.0.0"

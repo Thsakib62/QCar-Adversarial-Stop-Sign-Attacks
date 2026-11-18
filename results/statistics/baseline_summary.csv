@@ -1,0 +1,7 @@
+condition,attack_pattern,stop_id,metric,n_total,n_valid,mean,std_dev,min,max,bootstrap_ci_95_lower,bootstrap_ci_95_upper,bootstrap_ci_note,missed_stop_outcomes,missed_stop_outcomes_text
+baseline_clean,clean,1,detection_distance_m,30,30,2.7527999999999997,0.35497279157510186,2.16,3.48,2.629065,2.8802016666666668,computed,0,0/30
+baseline_clean,clean,1,final_stop_distance_m,30,30,0.6831333333333333,0.061369841707995046,0.55,0.798,0.6607333333333332,0.7046,computed,0,0/30
+baseline_clean,clean,2,detection_distance_m,30,30,3.1251333333333324,0.24948868170490338,2.616,3.528,3.033198333333333,3.210268333333333,computed,0,0/30
+baseline_clean,clean,2,final_stop_distance_m,30,30,0.6467333333333333,0.10360067012608902,0.4,0.788,0.6094,0.6819333333333333,computed,0,0/30
+baseline_clean,clean,3,detection_distance_m,30,30,2.3945999999999996,0.10375322180290486,2.196,2.644,2.3584650000000003,2.432466666666667,computed,0,0/30
+baseline_clean,clean,3,final_stop_distance_m,30,30,0.6558666666666666,0.08868842529670484,0.476,0.796,0.6238666666666666,0.6868666666666667,computed,0,0/30

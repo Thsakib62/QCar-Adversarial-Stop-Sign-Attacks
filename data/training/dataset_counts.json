@@ -1,0 +1,48 @@
+{
+  "train": {
+    "images": 244,
+    "labels": 244,
+    "objects": 758,
+    "class_counts": {
+      "obstacle_box": 88,
+      "stop_sign": 324,
+      "obstacle_bottle": 68,
+      "traffic_light": 159,
+      "car": 119
+    },
+    "frame_min": 0,
+    "frame_max": 305
+  },
+  "val": {
+    "images": 62,
+    "labels": 62,
+    "objects": 206,
+    "class_counts": {
+      "obstacle_box": 26,
+      "stop_sign": 98,
+      "obstacle_bottle": 13,
+      "traffic_light": 32,
+      "car": 37
+    },
+    "frame_min": 3,
+    "frame_max": 304
+  },
+  "heldout_test": {
+    "images": 41,
+    "labels": 41,
+    "objects": 118,
+    "class_counts": {
+      "obstacle_box": 9,
+      "stop_sign": 54,
+      "obstacle_bottle": 8,
+      "traffic_light": 30,
+      "car": 17
+    },
+    "frame_min": 306,
+    "frame_max": 346
+  },
+  "integrity": {
+    "filename_overlap_historical_vs_heldout": 0,
+    "sha256_image_overlap_historical_vs_heldout": 0
+  }
+}

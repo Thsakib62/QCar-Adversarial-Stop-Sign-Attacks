@@ -1,0 +1,5 @@
+0 obstacle_box
+1 stop_sign
+2 obstacle_bottle
+3 traffic_light
+4 car

@@ -1,0 +1,18 @@
+Historical YOLO cache provenance
+================================
+
+The binary cache files were not included because they embed machine-specific source paths.
+The original master-project copies remain unchanged.
+
+train.cache
+  timestamp: 2025-05-09 12:05:39 -05:00
+  bytes: 65064
+  SHA-256: 3be004f3e76fc16d24fde80d32ffd7e7cb2ed66e27a7f040437286b4ab1f6780
+
+val.cache
+  timestamp: 2025-05-09 12:06:07 -05:00
+  bytes: 16954
+  SHA-256: 94fabd315ea8b49432a40d52110060f8d059ab3ce9ef0cc2373b4dbca4373a55
+
+The cache timestamps precede and coincide with the qcar_aug_exp1v2 training run. Later
+`.cache.npy` conversions are not treated as historical evidence and are excluded.

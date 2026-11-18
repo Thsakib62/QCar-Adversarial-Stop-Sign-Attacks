@@ -1,0 +1,7 @@
+mode: baseline
+model_pytorch: models/pytorch/yolov5n_coco_baseline.pt
+model_tensorrt: models/tensorrt/yolov5n_coco_baseline.engine
+stop_sign_label: stop sign
+stopping_threshold_m: 0.8
+camera: front_csi_rgb
+lidar: rplidar_a2

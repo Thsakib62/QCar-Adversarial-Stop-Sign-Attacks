@@ -1,0 +1,12 @@
+Held-out YOLOv5n detector evaluation
+Split: post-training attacked-sign collection, continuous frames 0306-0346
+Stop-sign condition: attacked only (54 annotations); attack variant not encoded per frame
+
+Class                 Precision (%)  Recall (%)  AP@0.5 (%)  AP@0.5:0.95 (%)
+--------------------  -------------  ----------  -----------  ----------------
+obstacle_box                  82.76       88.89        88.13             66.85
+stop_sign                     87.19       94.44        94.55             64.19
+obstacle_bottle              100.00       73.16        81.19             38.81
+traffic_light                 83.97       70.00        78.24             38.27
+car                          100.00       81.07        88.65             50.74
+Overall                       90.79       81.51        86.15             51.77

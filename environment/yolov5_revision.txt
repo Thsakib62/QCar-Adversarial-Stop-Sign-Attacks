@@ -1,0 +1,4 @@
+Ultralytics YOLOv5 release: v6.1
+Short commit: 3752807c
+Full commit: 3752807c0b8af03d42de478fbcbf338ec4546a6c
+Upstream repository: https://github.com/ultralytics/yolov5

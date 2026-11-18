@@ -1,9 +1,15 @@
-# Documentation-only review-stage allowlist.
-# Update this policy as part of the separately reviewed post-acceptance release.
-*
-!.gitignore
-!README.md
-!REPRODUCIBILITY.md
-!SOFTWARE_ENVIRONMENT.md
-!ARTIFACT_AVAILABILITY.md
-!CITATION.cff
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+runs/
+results/training_reproduction/
+*.tmp
+*.bak
+*.cache
+*.npy
+.DS_Store
+Thumbs.db

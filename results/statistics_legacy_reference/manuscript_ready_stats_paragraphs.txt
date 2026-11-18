@@ -1,0 +1,9 @@
+Across the 30 clean baseline runs, distance metrics were summarized using means, standard deviations, ranges, and 10,000-resample bootstrap 95% confidence intervals for the mean.
+
+For the three primary adversarial designs (Lu2, Yang, and Lu3), pre- and post-mitigation experiments were treated as independent groups because they used the same route and physical protocol but different detector/model configurations. Therefore, missed stop outcome counts were compared using two-sided Fisher exact tests rather than McNemar's test.
+
+Aggregated across Lu2, Yang, and Lu3, pre-mitigation runs produced 14/54 stop-level missed stop outcomes, compared with 0/54 after mitigation. This corresponds to an absolute reduction of 25.9 percentage points in missed stop outcomes.
+
+For continuous distance metrics, two-sided Mann-Whitney U tests were used for valid numeric pre- versus post-mitigation values. P-values are reported descriptively and should not be overinterpreted given the small sample sizes.
+
+The seven additional post-mitigation designs completed the route without missed stop outcomes across the available post-mitigation runs per additional printed design; these limited checks are not used to claim full generalization.

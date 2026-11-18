@@ -1,0 +1,56 @@
+INPUT FILES FOUND
+- nonattacked_30_runs_for_stats.csv
+- Testbed Data - Attacked.csv
+- Mitigation_results.csv
+- 7_Mitigations.csv
+
+INFERRED CONDITION/PATTERN MAPPING
+- nonattacked_30_runs_for_stats.csv -> condition=baseline_clean, attack_pattern=clean
+- Testbed Data - Attacked.csv -> condition=pre_mitigation_attack, attack_pattern from forward-filled `Attacked Stop SIgn`; Yang3 normalized to Yang
+- Mitigation_results.csv -> condition=post_mitigation, attack_pattern from `Attack`
+- 7_Mitigations.csv -> condition=post_mitigation, attack_pattern from forward-filled `Attack`
+
+ROW COUNTS PER CONDITION AND ATTACK PATTERN
+condition              attack_pattern
+baseline_clean         clean             30
+post_mitigation        Chen1              6
+                       Chen2              6
+                       Chen3              6
+                       Eykholt1           6
+                       Eykholt2           6
+                       Eykholt3           6
+                       Lu1                6
+                       Lu2                6
+                       Lu3                6
+                       Yang               6
+pre_mitigation_attack  Lu2                6
+                       Lu3                6
+                       Yang               6
+
+MISSING-VALUE SUMMARY
+            condition attack_pattern  rows_stop_level  missing_detection_distance  missing_final_stop_distance  missing_tracking_count  missed_stop_outcomes
+       baseline_clean          clean               90                           0                            0                       0                     0
+      post_mitigation          Chen1               18                           0                            0                      18                     0
+      post_mitigation          Chen2               18                           0                            0                      18                     0
+      post_mitigation          Chen3               18                           0                            0                      18                     0
+      post_mitigation       Eykholt1               18                           0                            0                      18                     0
+      post_mitigation       Eykholt2               18                           0                            0                      18                     0
+      post_mitigation       Eykholt3               18                           0                            0                      18                     0
+      post_mitigation            Lu1               18                           0                            0                      18                     0
+      post_mitigation            Lu2               18                           0                            0                      18                     0
+      post_mitigation            Lu3               18                           0                            0                      18                     0
+      post_mitigation           Yang               18                           0                            0                      18                     0
+pre_mitigation_attack            Lu2               18                           1                            2                       1                     2
+pre_mitigation_attack            Lu3               18                           9                           11                      14                    11
+pre_mitigation_attack           Yang               18                           1                            1                       0                     1
+
+ASSUMPTIONS MADE
+- Blank attack-pattern cells in Testbed Data - Attacked.csv were forward-filled.
+- Yang3 in the pre-mitigation file was normalized to Yang.
+- Dash and footnote-marked values were parsed as missing or numeric values as appropriate; missing distances were not replaced with zero.
+- Vehicle-level final-stop missed_stop_outcome=1 when final stopping distance is missing or exceeds 0.8 m; a missing first-detection value alone is not counted as a missed stop outcome.
+- Pre- and post-mitigation runs were treated as independent groups.
+- Bootstrap confidence intervals used 10,000 resamples and random seed 42.
+- Bootstrap confidence intervals marked NA have fewer than 2 valid numeric values.
+- 7_Mitigations.csv was treated as post_mitigation for seven additional printed designs; observed run counts were used as recorded: Chen1=6, Chen2=6, Chen3=6, Eykholt1=6, Eykholt2=6, Eykholt3=6, Lu1=6.
+- 7_Mitigations.csv does not contain route completion time; route completion summaries are therefore NA.

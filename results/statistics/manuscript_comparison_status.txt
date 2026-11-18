@@ -1,0 +1,9 @@
+Statistical manuscript comparison status
+=========================================
+
+Table 5: Regenerated values match the separately supplied revised Table 5 document.
+Table 7: Regenerated values match the separately supplied revised Table 7 document.
+
+The Tables 5 and 7 embedded in the manuscript snapshot available during packaging contain
+older values and do not match the raw-data regeneration. They must be replaced before the
+final manuscript/repository consistency check. See docs/ARTIFACT_AUDIT.md.

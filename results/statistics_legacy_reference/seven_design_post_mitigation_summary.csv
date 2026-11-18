@@ -1,0 +1,8 @@
+attack_pattern,n_runs,runs_with_any_missed_stop_outcome,total_stop_level_missed_outcomes,route_completion_mean_s,route_completion_std_dev_s,route_completion_ci_95_lower_s,route_completion_ci_95_upper_s,route_completion_range_s
+Chen1,6,0,0,NA,NA,NA,NA,NA
+Chen2,6,0,0,NA,NA,NA,NA,NA
+Chen3,6,0,0,NA,NA,NA,NA,NA
+Eykholt1,6,0,0,NA,NA,NA,NA,NA
+Eykholt2,6,0,0,NA,NA,NA,NA,NA
+Eykholt3,6,0,0,NA,NA,NA,NA,NA
+Lu1,6,0,0,NA,NA,NA,NA,NA

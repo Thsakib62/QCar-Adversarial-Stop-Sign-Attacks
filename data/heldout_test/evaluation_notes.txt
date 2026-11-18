@@ -1,0 +1,24 @@
+Held-out evaluation notes
+=========================
+
+Model: models/pytorch/qcar_aug_exp1v2_best.pt
+YOLOv5: v6.1, commit 3752807c0b8af03d42de478fbcbf338ec4546a6c
+Image size: 640
+Batch size: 16
+Confidence threshold for mAP: 0.001
+NMS IoU threshold: 0.6
+Output: results/heldout_evaluation/yolov5_validation/qcar_aug_exp1v2_heldout_test
+
+Split: continuous frames 0306-0346 from a post-training attacked-sign collection.
+Images/labels: 41/41
+Objects: 118
+Class counts: obstacle_box=9, stop_sign=54, obstacle_bottle=8, traffic_light=30, car=17
+Filename overlap with historical split: 0
+Exact SHA-256 image overlap with historical split: 0
+
+Overall precision=0.90785055, recall=0.81511364, mAP@0.5=0.86152504,
+mAP@0.5:0.95=0.51773586. Stop-sign precision=0.87194430,
+recall=0.94444444, AP@0.5=0.94554491, AP@0.5:0.95=0.64191957.
+
+All held-out stop signs are attacked according to the filename rule. Attack variants are
+not encoded per frame. The evaluation is range-separated, not fully independent.

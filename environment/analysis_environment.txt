@@ -1,0 +1,12 @@
+Offline held-out evaluation environment
+=======================================
+Role: later offline validation of the range-separated held-out detector split
+Operating system: Windows 10
+GPU: NVIDIA GeForce RTX 3060
+Python: 3.10.8
+PyTorch: 2.7.0+cu118
+Evaluation image size: 640
+Evaluation batch size: 16
+
+This reconstructed environment was not the original onboard QCar environment and is not
+claimed to be the original model-training environment.

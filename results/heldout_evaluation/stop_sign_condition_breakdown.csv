@@ -1,0 +1,6 @@
+dataset_scope,split,stop_sign_condition,images,images_with_stop_sign,stop_sign_annotations
+historical_training,train,clean,162,103,125
+historical_training,train,attacked,82,82,199
+historical_model_selection,val,clean,39,24,28
+historical_model_selection,val,attacked,23,23,70
+range_heldout,test,attacked,41,41,54

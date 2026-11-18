@@ -1,0 +1,10 @@
+Training environment evidence
+=============================
+The revised manuscript identifies an NVIDIA RTX 3060 workstation for training.
+The archived training run records YOLOv5 v6.1-compatible options, 640-pixel images,
+batch size 8, 100 epochs, SGD, and frozen layer groups 0-9.
+
+Exact original workstation OS, Python, PyTorch, torchvision, CUDA, and cuDNN versions
+were not preserved in the checkpoint run directory and are therefore not asserted here.
+The later Windows environment used to reconstruct held-out evaluation is not treated as
+the original training environment.

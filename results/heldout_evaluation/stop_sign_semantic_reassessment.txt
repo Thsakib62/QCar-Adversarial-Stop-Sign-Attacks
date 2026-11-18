@@ -1,0 +1,19 @@
+Stop-sign semantic reassessment
+===============================
+
+The new naming rule changes interpretation but does not require rerunning inference.
+The model, images, bounding boxes, and class IDs are unchanged, so all numerical metrics remain unchanged.
+
+Original train split: 125 clean and 199 attacked stop-sign annotations.
+Original validation split: 28 clean and 70 attacked stop-sign annotations.
+Held-out test split: 0 clean and 54 attacked stop-sign annotations.
+
+The held-out stop_sign result is therefore an attacked-sign result:
+Precision: 87.19%
+Recall: 94.44%
+AP@0.5: 94.55%
+AP@0.5:0.95: 64.19%
+
+The split remains valid as an unseen-frame, range-separated attacked-sign test for qcar_aug_exp1v2/best.pt.
+It does not measure clean-sign test performance, generalization to unseen attack types, or fully independent-session
+generalization. Those questions require newly collected and explicitly identified data.

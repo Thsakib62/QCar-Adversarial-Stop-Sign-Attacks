@@ -1,0 +1,4 @@
+path: .
+test: data/heldout_test/images
+nc: 5
+names: [obstacle_box, stop_sign, obstacle_bottle, traffic_light, car]

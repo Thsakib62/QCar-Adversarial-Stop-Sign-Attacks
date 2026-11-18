@@ -1,0 +1,13 @@
+comparison,attack_pattern,stop_id,metric,test,p_value,note
+pre_vs_post_main_designs,Lu2+Yang+Lu3,1,detection_distance_m,Mann-Whitney U,5.689358105603329e-07,Two-sided independent rank-sum test on valid numeric values.
+pre_vs_post_main_designs,Lu2+Yang+Lu3,1,missed_stop_outcome,Fisher exact,1.0,"Two-sided Fisher exact test using [[0, 18], [0, 18]]."
+pre_vs_post_main_designs,Lu2+Yang+Lu3,1,final_stop_distance_m,Mann-Whitney U,0.001041648556726728,Two-sided independent rank-sum test on valid numeric values.
+pre_vs_post_main_designs,Lu2+Yang+Lu3,1,missed_stop_outcome,Fisher exact,1.0,"Two-sided Fisher exact test using [[0, 18], [0, 18]]."
+pre_vs_post_main_designs,Lu2+Yang+Lu3,2,detection_distance_m,Mann-Whitney U,5.062342850733123e-06,Two-sided independent rank-sum test on valid numeric values.
+pre_vs_post_main_designs,Lu2+Yang+Lu3,2,missed_stop_outcome,Fisher exact,0.019061583577712607,"Two-sided Fisher exact test using [[6, 12], [0, 18]]."
+pre_vs_post_main_designs,Lu2+Yang+Lu3,2,final_stop_distance_m,Mann-Whitney U,4.2681937112039816e-05,Two-sided independent rank-sum test on valid numeric values.
+pre_vs_post_main_designs,Lu2+Yang+Lu3,2,missed_stop_outcome,Fisher exact,0.019061583577712607,"Two-sided Fisher exact test using [[6, 12], [0, 18]]."
+pre_vs_post_main_designs,Lu2+Yang+Lu3,3,detection_distance_m,Mann-Whitney U,0.20742348622360818,Two-sided independent rank-sum test on valid numeric values.
+pre_vs_post_main_designs,Lu2+Yang+Lu3,3,missed_stop_outcome,Fisher exact,0.0028921023359288096,"Two-sided Fisher exact test using [[8, 10], [0, 18]]."
+pre_vs_post_main_designs,Lu2+Yang+Lu3,3,final_stop_distance_m,Mann-Whitney U,0.01724209258068294,Two-sided independent rank-sum test on valid numeric values.
+pre_vs_post_main_designs,Lu2+Yang+Lu3,3,missed_stop_outcome,Fisher exact,0.0028921023359288096,"Two-sided Fisher exact test using [[8, 10], [0, 18]]."

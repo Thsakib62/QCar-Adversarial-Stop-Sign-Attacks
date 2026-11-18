@@ -1,0 +1,26 @@
+{
+  "split_rule": "All annotated frames 0306-0346 from a separately assembled post-training collection batch.",
+  "inferred_group": "post_training_contiguous_frame_range_0306_0346",
+  "frame_start": 306,
+  "frame_end": 346,
+  "images": 41,
+  "label_files": 41,
+  "annotation_boxes": 118,
+  "class_annotation_counts": {
+    "obstacle_box": 9,
+    "stop_sign": 54,
+    "obstacle_bottle": 8,
+    "traffic_light": 30,
+    "car": 17
+  },
+  "historical_dataset": "data/training",
+  "historical_train_and_validation_images": 306,
+  "historical_frame_range": "0000-0305",
+  "heldout_dataset": "data/heldout_test",
+  "filename_overlap_with_historical": 0,
+  "exact_sha256_image_overlap_with_historical": 0,
+  "stop_sign_condition_rule": "frame_0000-frame_0200 clean; frame_0201 onward attacked",
+  "heldout_stop_sign_condition": "attacked_only",
+  "attack_variant_per_frame_available": false,
+  "session_independence_guaranteed": false
+}

@@ -1,0 +1,51 @@
+{
+  "overall": {
+    "precision": 0.90785055,
+    "recall": 0.81511364,
+    "mAP@0.5": 0.86152504,
+    "mAP@0.5:0.95": 0.51773586
+  },
+  "per_class": [
+    {
+      "class_name": "obstacle_box",
+      "precision": 0.82757703,
+      "recall": 0.88888889,
+      "AP@0.5": 0.88131226,
+      "AP@0.5:0.95": 0.66846509
+    },
+    {
+      "class_name": "stop_sign",
+      "precision": 0.8719443,
+      "recall": 0.94444444,
+      "AP@0.5": 0.94554491,
+      "AP@0.5:0.95": 0.64191957
+    },
+    {
+      "class_name": "obstacle_bottle",
+      "precision": 1.0,
+      "recall": 0.73158353,
+      "AP@0.5": 0.81188276,
+      "AP@0.5:0.95": 0.38812326
+    },
+    {
+      "class_name": "traffic_light",
+      "precision": 0.8397314,
+      "recall": 0.7,
+      "AP@0.5": 0.78237286,
+      "AP@0.5:0.95": 0.38274116
+    },
+    {
+      "class_name": "car",
+      "precision": 1.0,
+      "recall": 0.81065132,
+      "AP@0.5": 0.8865124,
+      "AP@0.5:0.95": 0.5074302
+    }
+  ],
+  "speed_ms_per_image": {
+    "preprocess": 0.5497060170987756,
+    "inference": 6.513194340031322,
+    "nms": 2.595157158084032
+  },
+  "validation_output": "results/heldout_evaluation/yolov5_validation/qcar_aug_exp1v2_heldout_test"
+}

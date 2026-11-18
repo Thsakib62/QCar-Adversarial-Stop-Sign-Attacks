@@ -1,0 +1,9 @@
+Reference held-out commands
+===========================
+python scripts/build_dataset_manifests.py
+python src/evaluation/summarize_stop_sign_semantics.py
+python scripts/reproduce_heldout_eval.py --yolov5-root /path/to/yolov5 --img 640 --batch-size 16 --device 0 --workers 4
+
+The original offline execution used the same image size, batch size, device index, and
+worker count. Machine-specific interpreter and output paths were removed from this public copy.
+The untouched private provenance remains in the master project outside this release directory.

@@ -1,0 +1,24 @@
+TABLE 5. Pre-mitigation attack summary for Lu2, Yang, and Lu3.
+
+Attack | Stop | Metric | n valid / total | Mean +/- SD | 95% bootstrap CI | Range | Change vs. baseline | Missed stop outcome
+---|---:|---|---|---|---|---|---:|---
+Lu2 | 1 | First detection | 6/6 | 2.425 +/- 0.315 | [2.205, 2.660] | [2.050, 2.860] | -11.9% | —
+Lu2 | 1 | Final stopping distance | 6/6 | 0.588 +/- 0.113 | [0.493, 0.652] | [0.370, 0.680] | -13.9% | 0/6
+Lu2 | 2 | First detection | 6/6 | 2.415 +/- 0.255 | [2.232, 2.598] | [2.040, 2.770] | -22.7% | —
+Lu2 | 2 | Final stopping distance | 5/6 | 0.650 +/- 0.107 | [0.570, 0.734] | [0.510, 0.780] | 0.5% | 1/6
+Lu2 | 3 | First detection | 5/6 | 2.338 +/- 0.152 | [2.214, 2.440] | [2.100, 2.500] | -2.4% | —
+Lu2 | 3 | Final stopping distance | 5/6 | 0.542 +/- 0.075 | [0.478, 0.602] | [0.430, 0.640] | -17.4% | 1/6
+Yang | 1 | First detection | 6/6 | 2.118 +/- 0.294 | [1.878, 2.298] | [1.570, 2.380] | -23.0% | —
+Yang | 1 | Final stopping distance | 6/6 | 0.600 +/- 0.040 | [0.570, 0.630] | [0.540, 0.660] | -12.2% | 0/6
+Yang | 2 | First detection | 6/6 | 2.352 +/- 0.111 | [2.270, 2.430] | [2.180, 2.500] | -24.7% | —
+Yang | 2 | Final stopping distance | 6/6 | 0.602 +/- 0.059 | [0.560, 0.645] | [0.540, 0.690] | -7.0% | 0/6
+Yang | 3 | First detection | 5/6 | 2.380 +/- 0.076 | [2.328, 2.444] | [2.300, 2.500] | -0.6% | —
+Yang | 3 | Final stopping distance | 5/6 | 0.582 +/- 0.125 | [0.470, 0.644] | [0.360, 0.650] | -11.3% | 1/6
+Lu3 | 1 | First detection | 6/6 | 1.600 +/- 0.214 | [1.450, 1.767] | [1.300, 1.950] | -41.9% | —
+Lu3 | 1 | Final stopping distance | 6/6 | 0.643 +/- 0.043 | [0.612, 0.673] | [0.580, 0.690] | -5.8% | 0/6
+Lu3 | 2 | First detection | 2/6 | 1.800 +/- 0.028 | [1.780, 1.820] | [1.780, 1.820] | -42.4% | —
+Lu3 | 2 | Final stopping distance | 1/6 | 0.600 +/- NA | NA | [0.600, 0.600] | -7.2% | 5/6
+Lu3 | 3 | First detection | 1/6 | 2.200 +/- NA | NA | [2.200, 2.200] | -8.1% | —
+Lu3 | 3 | Final stopping distance | 0/6 | NA +/- NA | NA | [NA, NA] | NA% | 6/6
+
+Note: Statistics use valid numeric values only. NA indicates fewer than two valid values for SD or bootstrap CI. Change vs. baseline uses the corresponding 30-run clean-sign baseline mean. Missed stop outcomes are vehicle-level final-stop outcomes and are displayed only on final-stopping-distance rows.

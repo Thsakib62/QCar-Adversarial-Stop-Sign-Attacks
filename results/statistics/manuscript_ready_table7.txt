@@ -1,0 +1,14 @@
+TABLE 7. Pre- and post-mitigation summary aggregated across Lu2, Yang, and Lu3.
+
+Fisher's exact test was used for missed stop outcomes because the pre- and post-mitigation runs were independent.
+
+Stop | Metric | Baseline mean | Pre n valid / total | Pre mean +/- SD | Pre 95% CI | Pre range | Post n valid / total | Post mean +/- SD | Post 95% CI | Post range | Post - pre | Mann-Whitney p | Missed stop outcome pre -> post | Fisher p | Reduction
+---:|---|---:|---|---|---|---|---|---|---|---|---:|---:|---|---:|---:
+1 | First detection | 2.753 | 18/18 | 2.048 +/- 0.437 | [1.851, 2.246] | [1.300, 2.860] | 18/18 | 3.000 +/- 0.100 | [2.954, 3.043] | [2.840, 3.130] | 0.952 | <0.0001 | — | — | —
+1 | Final stopping distance | 0.683 | 18/18 | 0.611 +/- 0.073 | [0.574, 0.639] | [0.370, 0.690] | 18/18 | 0.519 +/- 0.081 | [0.483, 0.557] | [0.400, 0.680] | -0.092 | 0.0010 | 0/18 -> 0/18 | 1.0000 | 0.0 pp
+2 | First detection | 3.125 | 14/18 | 2.300 +/- 0.275 | [2.157, 2.432] | [1.780, 2.770] | 18/18 | 2.824 +/- 0.097 | [2.778, 2.864] | [2.600, 2.960] | 0.524 | <0.0001 | — | — | —
+2 | Final stopping distance | 0.647 | 12/18 | 0.622 +/- 0.080 | [0.580, 0.666] | [0.510, 0.780] | 18/18 | 0.476 +/- 0.054 | [0.453, 0.500] | [0.410, 0.560] | -0.146 | <0.0001 | 6/18 -> 0/18 | 0.0191 | 33.3 pp
+3 | First detection | 2.395 | 11/18 | 2.345 +/- 0.120 | [2.274, 2.409] | [2.100, 2.500] | 18/18 | 2.289 +/- 0.106 | [2.240, 2.335] | [2.110, 2.460] | -0.056 | 0.2074 | — | — | —
+3 | Final stopping distance | 0.656 | 10/18 | 0.562 +/- 0.099 | [0.502, 0.616] | [0.360, 0.650] | 18/18 | 0.460 +/- 0.079 | [0.426, 0.496] | [0.360, 0.620] | -0.102 | 0.0172 | 8/18 -> 0/18 | 0.0029 | 44.4 pp
+
+Note: Pre/post values aggregate six independent runs each for Lu2, Yang, and Lu3 (18 total per condition). Missing values are not replaced with zero. Fisher results and missed outcomes are stop-level and appear only on final-stopping-distance rows.

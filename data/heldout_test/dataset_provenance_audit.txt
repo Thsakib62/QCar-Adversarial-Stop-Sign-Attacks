@@ -1,0 +1,31 @@
+Held-out dataset provenance audit
+================================
+
+Checkpoint-linked historical pool
+---------------------------------
+The reconstructed original train/model-selection pool contains frames 0000-0305,
+244 train images and 62 validation images. Cache timestamps and saved validation
+mosaics associate this split with qcar_aug_exp1v2, although the original runtime
+data/qcar.yaml was later edited and was not copied into the run folder.
+
+Held-out rule
+-------------
+All annotated frames 0306-0346 from the separately assembled post-training collection
+were used as one continuous range-separated test group. The split contains 41 images,
+41 labels, and 118 boxes. It has zero filename overlap and zero exact SHA-256 image
+overlap with the reconstructed historical pool.
+
+Stop-sign semantics
+-------------------
+The naming convention defines frames 0000-0200 as clean and frames 0201 onward as
+attacked. All 54 held-out stop-sign annotations are therefore attacked. The individual
+Eykholt1, Eykholt2, or Lu3 variant is not encoded per frame.
+
+Limitations
+-----------
+No explicit recording-session, site, or scene identifier is available. The split is
+range-separated and post-training but cannot be described as fully independent or as
+evidence of cross-session, cross-site, or unseen-attack-type generalization.
+
+Machine-specific source paths were removed from this public copy. The untouched private
+provenance record remains outside the release directory.
