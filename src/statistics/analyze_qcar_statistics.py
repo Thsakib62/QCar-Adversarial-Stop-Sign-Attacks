@@ -418,16 +418,20 @@ def write_table5_text(table5: pd.DataFrame) -> str:
         "---|---:|---|---|---|---|---|---:|---",
     ]
     for _, row in table5.iterrows():
+        sufficient_measurements = int(row["n_valid"]) >= 3
+        mean_and_sd = f"{fmt(row['mean'])} +/- {fmt(row['std_dev'])}" if sufficient_measurements else f"{fmt(row['mean'])} +/- NA"
+        confidence_interval = ci_text(row["bootstrap_ci_95_lower"], row["bootstrap_ci_95_upper"]) if sufficient_measurements else "NA"
+        percent_change = f"{fmt(row['percent_change_vs_baseline'], 1)}%" if sufficient_measurements else "NA"
         lines.append(
             f"{row['attack_pattern']} | {int(row['stop_id'])} | {metric_name(row['metric'])} | "
-            f"{int(row['n_valid'])}/{int(row['n_total'])} | {fmt(row['mean'])} +/- {fmt(row['std_dev'])} | "
-            f"{ci_text(row['bootstrap_ci_95_lower'], row['bootstrap_ci_95_upper'])} | "
-            f"[{fmt(row['min'])}, {fmt(row['max'])}] | {fmt(row['percent_change_vs_baseline'], 1)}% | "
+            f"{int(row['n_valid'])}/{int(row['n_total'])} | {mean_and_sd} | "
+            f"{confidence_interval} | "
+            f"[{fmt(row['min'])}, {fmt(row['max'])}] | {percent_change} | "
             f"{row['missed_stop_outcomes_text'] if row['metric'] == 'final_stop_distance_m' else '—'}"
         )
     lines.append("")
     lines.append(
-        "Note: Statistics use valid numeric values only. NA indicates fewer than two valid values for SD or bootstrap CI. "
+        "Note: Statistics use valid numeric values only. SD, bootstrap CI, and percent change are suppressed with fewer than three valid values. "
         "Change vs. baseline uses the corresponding 30-run clean-sign baseline mean. Missed stop outcomes are vehicle-level "
         "final-stop outcomes and are displayed only on final-stopping-distance rows."
     )

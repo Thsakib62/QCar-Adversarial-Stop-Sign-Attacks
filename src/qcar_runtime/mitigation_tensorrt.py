@@ -24,7 +24,7 @@ myCar = QCar()
 # model = DetectMultiBackend(weights='models/pytorch/qcar_aug_exp1v2_best.pt', device=device)
 # stride, names, pt = model.stride, model.names, model.pt
 device = select_device('0')
-ENGINE_PATH = os.environ.get("QCAR_WEIGHTS", "models/tensorrt/qcar_aug_exp1v2_best.engine")
+ENGINE_PATH = os.environ.get("QCAR_WEIGHTS", "models/tensorrt/qcar_physical_mitigation_reexport.engine")
 DATA_YAML = os.environ.get("QCAR_DATA_YAML", "configs/dataset/qcar.yaml")
 STOP_SIGN_LABELS = ('stop_sign', 'stop sign')
 STOP_SIGN_CONTROL_LABEL = 'stop_sign'

@@ -1,48 +1,25 @@
 # Dataset Provenance
 
-## Checkpoint-Linked Historical Corpus
+## Physical-Mitigation Training Evidence
 
-The strongest available provenance links `qcar_aug_exp1v2` to the preserved split in `data/training/`:
+`data/physical_training/` preserves the checkpoint-linked image and YOLO-label split from the later fine-tuning run. The saved training configuration and metrics are under `configs/training/` and `results/physical_training/`.
 
-- 244 training images and labels; 758 boxes
-- 62 model-selection validation images and labels; 206 boxes
-- 306 total images; 964 total boxes
-- five classes: `obstacle_box`, `stop_sign`, `obstacle_bottle`, `traffic_light`, `car`
-- filename pool spans frames 0000–0305, randomly distributed between train and validation
-- `train.cache` and `val.cache` timestamps align with the May 9, 2025 run
-- saved validation mosaics match filenames in this split
+- 244 training images and labels, 765 boxes; 62 model-selection validation images and labels, 199 boxes.
+- 306 distinct frames, `frame_0000` through `frame_0305`, and 964 boxes overall.
+- Five classes in order: `obstacle_box`, `stop_sign`, `obstacle_bottle`, `traffic_light`, `car`.
+- 422 stop-sign boxes: 153 in frames `0000–0200` (clean by the supplied naming rule) and 269 in frames `0201–0305` (attacked by that rule).
+- The train/validation image split interleaves neighboring frames; its validation curve is model-selection evidence, not independent generalization.
 
-Per-class totals are 114 obstacle boxes, 422 stop signs, 81 obstacle bottles, 191 traffic lights, and 156 cars. The split is preserved exactly, including cache files and per-file manifests.
+The five-class YOLO labels encode every stop-sign instance as class `1`, without a clean/attacked flag or attack-design ID. The current manuscript names Chen2, Eykholt1, and Eykholt3 as training patterns, but the preserved filenames and labels do not independently identify those designs per image. These names should not be inferred from the label index. The claim that Lu2, Yang, and Lu3 were absent from training likewise cannot be verified from the annotations alone.
 
-## Stop-Sign Semantics
+## Auxiliary Offline Detector Evaluation
 
-By the acquisition naming rule supplied with the dataset:
+`data/training/` preserves the separate training split associated with the **auxiliary offline-evaluation checkpoint**. It also has 306 images and 964 boxes, but has a different train/validation allocation and image content. Its manifests and cache-provenance record belong to that auxiliary analysis, not to the physical-training split.
 
-- frames 0000–0200 contain clean stop-sign instances
-- frames 0201 onward contain attacked stop-sign instances labeled as `stop_sign`
-- attacked variants are Eykholt1, Eykholt2, or Lu3, but the individual variant is not encoded per frame
+`data/heldout_test/` contains frames `0306–0346`: 41 images, 41 labels, and 118 boxes. All 54 stop-sign boxes are attacked by the naming rule; there are no clean stop-sign boxes. The other 64 annotations are different classes. The attack design is not encoded per frame, and the split is range-separated rather than proven independent by session or site. The reported detector metrics in `results/heldout_evaluation/` evaluate the auxiliary checkpoint only, **not** the physical-mitigation checkpoint.
 
-The reconstructed historical split contains 153 clean and 269 attacked stop-sign annotations. Train contains 125 clean and 199 attacked annotations; validation contains 28 clean and 70 attacked annotations.
+## Manuscript Aggregate Not Reproduced
 
-## Range-Separated Held-Out Set
+The editorial manuscript reports 350 images, 1,092 boxes, and 480 stop-sign boxes (175 clean, 305 attacked). Neither the preserved 306-image checkpoint-linked split nor the 347-image later assembled folder reproduces those totals. The missing four-image/ten-box provenance cannot be supplied by changing labels or silently adding held-out frames to training. This numerical discrepancy remains open pending an original dataset or collection manifest supporting the manuscript totals.
 
-The held-out set contains continuous frames 0306–0346 from a post-training collection batch:
-
-- 41 images and labels
-- 118 boxes
-- 54 attacked stop-sign boxes and no clean stop-sign boxes
-- no filename or exact SHA-256 image overlap with the 0000–0305 historical pool
-
-This separation reduces direct frame overlap but does not establish session, scene, site, or attack-variant independence. No explicit session IDs are available.
-
-## Known Alternative Dataset Folder
-
-A later combined source contains 347 images, 1,082 boxes, and frames 0000–0346. It combines the historical pool with the held-out range and must not be retroactively treated as the checkpoint’s original training corpus.
-
-## Unresolved Manuscript Count
-
-The manuscript snapshot states 350 images, 1,092 boxes, and 480 stop signs (175 clean and 305 adversarial). No preserved folder audited during packaging matches these totals. See `ARTIFACT_AUDIT.md`; the release does not silently choose a replacement value.
-
-## Redistribution
-
-Images and labels are staged in this local release package. Their public redistribution rights and participant/privacy status require explicit manual approval before upload. No dataset license is implied.
+No project-wide dataset license or per-image redistribution clearance is implied by the presence of images in this repository.

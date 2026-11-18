@@ -21,7 +21,7 @@ optimizer: SGD
 sync_bn: false
 workers: 8
 project: runs\train
-name: qcar_aug_exp1v2
+name: qcar_aug_exp1v3
 exist_ok: true
 quad: false
 cos_lr: false
@@ -35,4 +35,4 @@ entity: null
 upload_dataset: false
 bbox_interval: -1
 artifact_alias: latest
-save_dir: runs\train\qcar_aug_exp1v2
+save_dir: runs\train\qcar_aug_exp1v3

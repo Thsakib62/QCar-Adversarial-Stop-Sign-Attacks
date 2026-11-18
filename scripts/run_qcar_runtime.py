@@ -9,8 +9,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 VARIANTS = {
     "baseline-pytorch": ("baseline_pytorch.py", "models/pytorch/yolov5n_coco_baseline.pt", None),
     "baseline-tensorrt": ("baseline_tensorrt.py", "models/tensorrt/yolov5n_coco_baseline.engine", "coco"),
-    "mitigation-pytorch": ("mitigation_pytorch.py", "models/pytorch/qcar_aug_exp1v2_best.pt", None),
-    "mitigation-tensorrt": ("mitigation_tensorrt.py", "models/tensorrt/qcar_aug_exp1v2_best.engine", "qcar"),
+    "mitigation-pytorch": ("mitigation_pytorch.py", "models/pytorch/qcar_physical_mitigation_best.pt", None),
+    "mitigation-tensorrt": ("mitigation_tensorrt.py", "models/tensorrt/qcar_physical_mitigation_reexport.engine", "qcar"),
 }
 
 

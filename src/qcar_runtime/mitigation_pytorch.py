@@ -20,7 +20,7 @@ myCar = QCar()
 
 # Initialize YOLOv5 Model
 device = select_device('0' if torch.cuda.is_available() else 'cpu')
-model = DetectMultiBackend(weights=os.environ.get("QCAR_WEIGHTS", "models/pytorch/qcar_aug_exp1v2_best.pt"), device=device)
+model = DetectMultiBackend(weights=os.environ.get("QCAR_WEIGHTS", "models/pytorch/qcar_physical_mitigation_best.pt"), device=device)
 stride, names, pt = model.stride, model.names, model.pt
 img_size = check_img_size(640, s=stride)
 

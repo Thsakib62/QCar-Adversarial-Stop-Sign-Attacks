@@ -12,8 +12,8 @@ MODELS = {
         REPO_ROOT / "models" / "tensorrt" / "yolov5n_coco_baseline.engine",
     ),
     "mitigation": (
-        REPO_ROOT / "models" / "pytorch" / "qcar_aug_exp1v2_best.pt",
-        REPO_ROOT / "models" / "tensorrt" / "qcar_aug_exp1v2_best.engine",
+        REPO_ROOT / "models" / "pytorch" / "qcar_physical_mitigation_best.pt",
+        REPO_ROOT / "models" / "tensorrt" / "qcar_physical_mitigation_reexport.engine",
     ),
 }
 

@@ -1,9 +1,14 @@
 Statistical manuscript comparison status
 =========================================
 
-Table 5: Regenerated values match the separately supplied revised Table 5 document.
-Table 7: Regenerated values match the separately supplied revised Table 7 document.
+The editorial manuscript is the reporting reference for Tables 2, 5, 7, and 8.
+The raw 30-run baseline and attack/mitigation CSV files remain unchanged.
+Table 5 manuscript formatting suppresses SD, bootstrap CI, and percent change
+when fewer than three valid numeric measurements are available; the underlying
+machine-readable summaries retain the observed values and sample counts.
+Table 8 is the independent vehicle-run comparison (8/18 pre versus 0/18 post).
+Stop-level outcomes in Tables 5 and 7 are nested within those runs.
 
-The Tables 5 and 7 embedded in the manuscript snapshot available during packaging contain
-older values and do not match the raw-data regeneration. They must be replaced before the
-final manuscript/repository consistency check. See docs/ARTIFACT_AUDIT.md.
+The manuscript's training-dataset totals are not reproduced by the preserved
+checkpoint-linked image/label split. See docs/DATASET_PROVENANCE.md. The auxiliary
+held-out checkpoint is different from the physical-mitigation checkpoint.

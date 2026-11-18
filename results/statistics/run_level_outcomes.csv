@@ -1,0 +1,37 @@
+condition,attack_pattern,run_id,missed_any_required_stop,unmet_stop_ids,source_file
+post_mitigation,Lu2,1,0,,Mitigation_results.csv
+post_mitigation,Lu2,2,0,,Mitigation_results.csv
+post_mitigation,Lu2,3,0,,Mitigation_results.csv
+post_mitigation,Lu2,4,0,,Mitigation_results.csv
+post_mitigation,Lu2,5,0,,Mitigation_results.csv
+post_mitigation,Lu2,6,0,,Mitigation_results.csv
+post_mitigation,Lu3,1,0,,Mitigation_results.csv
+post_mitigation,Lu3,2,0,,Mitigation_results.csv
+post_mitigation,Lu3,3,0,,Mitigation_results.csv
+post_mitigation,Lu3,4,0,,Mitigation_results.csv
+post_mitigation,Lu3,5,0,,Mitigation_results.csv
+post_mitigation,Lu3,6,0,,Mitigation_results.csv
+post_mitigation,Yang,1,0,,Mitigation_results.csv
+post_mitigation,Yang,2,0,,Mitigation_results.csv
+post_mitigation,Yang,3,0,,Mitigation_results.csv
+post_mitigation,Yang,4,0,,Mitigation_results.csv
+post_mitigation,Yang,5,0,,Mitigation_results.csv
+post_mitigation,Yang,6,0,,Mitigation_results.csv
+pre_mitigation_attack,Lu2,1,0,,Testbed Data - Attacked.csv
+pre_mitigation_attack,Lu2,2,0,,Testbed Data - Attacked.csv
+pre_mitigation_attack,Lu2,3,1,2;3,Testbed Data - Attacked.csv
+pre_mitigation_attack,Lu2,4,0,,Testbed Data - Attacked.csv
+pre_mitigation_attack,Lu2,5,0,,Testbed Data - Attacked.csv
+pre_mitigation_attack,Lu2,6,0,,Testbed Data - Attacked.csv
+pre_mitigation_attack,Lu3,1,1,2;3,Testbed Data - Attacked.csv
+pre_mitigation_attack,Lu3,2,1,2;3,Testbed Data - Attacked.csv
+pre_mitigation_attack,Lu3,3,1,2;3,Testbed Data - Attacked.csv
+pre_mitigation_attack,Lu3,4,1,3,Testbed Data - Attacked.csv
+pre_mitigation_attack,Lu3,5,1,2;3,Testbed Data - Attacked.csv
+pre_mitigation_attack,Lu3,6,1,2;3,Testbed Data - Attacked.csv
+pre_mitigation_attack,Yang,1,1,3,Testbed Data - Attacked.csv
+pre_mitigation_attack,Yang,2,0,,Testbed Data - Attacked.csv
+pre_mitigation_attack,Yang,3,0,,Testbed Data - Attacked.csv
+pre_mitigation_attack,Yang,4,0,,Testbed Data - Attacked.csv
+pre_mitigation_attack,Yang,5,0,,Testbed Data - Attacked.csv
+pre_mitigation_attack,Yang,6,0,,Testbed Data - Attacked.csv

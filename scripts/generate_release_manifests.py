@@ -20,8 +20,10 @@ def sha256(path: Path) -> str:
 
 
 def describe(relative_path: str) -> tuple[str, str, str]:
-    if relative_path.startswith("data/training/") or relative_path.startswith("data/heldout_test/"):
+    if relative_path.startswith("data/physical_training/") or relative_path.startswith("data/training/") or relative_path.startswith("data/heldout_test/"):
         return "annotated_dataset", "Annotated image/label data or dataset provenance", "required"
+    if relative_path.startswith("media/"):
+        return "demonstration", "Illustrative QCar experiment video or description", "required"
     if relative_path.startswith("data/"):
         return "raw_experiment_data", "Preserved experimental input", "required"
     if relative_path.startswith("models/") and not relative_path.endswith("README.md"):

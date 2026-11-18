@@ -12,7 +12,7 @@ CLASS_NAMES = ["obstacle_box", "stop_sign", "obstacle_bottle", "traffic_light", 
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Reproduce qcar_aug_exp1v2 without overwriting the archived run.")
+    parser = argparse.ArgumentParser(description="Reproduce the physical-mitigation training configuration without overwriting archived runs.")
     parser.add_argument("--yolov5-root", type=Path, required=True)
     parser.add_argument("--device", default="0")
     args = parser.parse_args()
@@ -20,8 +20,8 @@ def main() -> None:
     output_project = REPO_ROOT / "results" / "training_reproduction"
     data_text = (
         f"path: '{REPO_ROOT.as_posix()}'\n"
-        "train: data/training/images/train\n"
-        "val: data/training/images/val\n"
+        "train: data/physical_training/images/train\n"
+        "val: data/physical_training/images/val\n"
         "nc: 5\n"
         f"names: {CLASS_NAMES!r}\n"
     )
@@ -41,7 +41,7 @@ def main() -> None:
             "--freeze", "10",
             "--device", args.device,
             "--project", str(output_project),
-            "--name", "qcar_aug_exp1v2_reproduction",
+            "--name", "qcar_physical_mitigation_reproduction",
             "--exist-ok",
         ]
         subprocess.run(command, cwd=yolov5_root, check=True)

@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this artifact, please cite the associated IEEE Access paper."
+message: "Cite the IEEE Access article when its DOI is available. The earlier TechRxiv preprint has DOI 10.36227/techrxiv.177273783.33405285/v1; identify it as a preprint, not the final article."
 title: "QCar Physical Adversarial Stop-Sign Evaluation Reproducibility Artifact"
 type: software
 authors:

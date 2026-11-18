@@ -1,0 +1,6 @@
+Table 8 independent vehicle-run outcomes
+Pre-mitigation: 8/18 runs missed at least one required stop
+Post-mitigation: 0/18 runs missed at least one required stop
+Two-sided Fisher exact p = 0.0029
+An unobserved later route requirement after an earlier termination is not a separate observed stop attempt.
+Source: raw pre- and post-mitigation CSV files; see run_level_outcomes.csv for run IDs.

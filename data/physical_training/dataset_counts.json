@@ -1,0 +1,34 @@
+{
+  "train": {
+    "images": 244,
+    "labels": 244,
+    "objects": 765,
+    "class_counts": {
+      "obstacle_box": 92,
+      "stop_sign": 322,
+      "obstacle_bottle": 70,
+      "traffic_light": 155,
+      "car": 126
+    },
+    "frame_min": 0,
+    "frame_max": 305
+  },
+  "val": {
+    "images": 62,
+    "labels": 62,
+    "objects": 199,
+    "class_counts": {
+      "obstacle_box": 22,
+      "stop_sign": 100,
+      "obstacle_bottle": 11,
+      "traffic_light": 36,
+      "car": 30
+    },
+    "frame_min": 9,
+    "frame_max": 304
+  },
+  "integrity": {
+    "filename_overlap_physical_vs_heldout": 0,
+    "sha256_image_overlap_physical_vs_heldout": 0
+  }
+}

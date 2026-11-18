@@ -80,6 +80,7 @@ def write_manifest(split: str, image_dir: Path, label_dir: Path, output: Path) -
 
 def main() -> None:
     training_root = REPO_ROOT / "data" / "training"
+    physical_training_root = REPO_ROOT / "data" / "physical_training"
     heldout_root = REPO_ROOT / "data" / "heldout_test"
     summaries = {
         "train": write_manifest(
@@ -119,7 +120,35 @@ def main() -> None:
         "sha256_image_overlap_historical_vs_heldout": len(historical_hashes & heldout_hashes),
     }
     (training_root / "dataset_counts.json").write_text(json.dumps(summaries, indent=2) + "\n", encoding="utf-8")
+    physical_summaries = {
+        split: write_manifest(
+            split,
+            physical_training_root / "images" / split,
+            physical_training_root / "labels" / split,
+            physical_training_root / f"{split}_manifest.csv",
+        )
+        for split in ("train", "val")
+    }
+    physical_rows = [
+        row
+        for split in ("train", "val")
+        for row in csv.DictReader((physical_training_root / f"{split}_manifest.csv").open(encoding="utf-8"))
+    ]
+    physical_frames = [int(row["frame_number"]) for row in physical_rows]
+    physical_hashes = {row["image_sha256"] for row in physical_rows}
+    if sorted(physical_frames) != list(range(306)):
+        raise RuntimeError("Physical training manifests are not exactly frames 0000-0305")
+    if physical_hashes & heldout_hashes:
+        raise RuntimeError("Exact image-content overlap found between physical training and held-out splits")
+    physical_summaries["integrity"] = {
+        "filename_overlap_physical_vs_heldout": len(set(physical_frames) & heldout_frames),
+        "sha256_image_overlap_physical_vs_heldout": len(physical_hashes & heldout_hashes),
+    }
+    (physical_training_root / "dataset_counts.json").write_text(
+        json.dumps(physical_summaries, indent=2) + "\n", encoding="utf-8"
+    )
     print(json.dumps(summaries, indent=2))
+    print(json.dumps({"physical_training": physical_summaries}, indent=2))
 
 
 if __name__ == "__main__":

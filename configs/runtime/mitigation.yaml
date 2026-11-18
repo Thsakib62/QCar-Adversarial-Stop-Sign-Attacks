@@ -1,6 +1,6 @@
 mode: adversarial_learning_mitigation
-model_pytorch: models/pytorch/qcar_aug_exp1v2_best.pt
-model_tensorrt: models/tensorrt/qcar_aug_exp1v2_best.engine
+model_pytorch: models/pytorch/qcar_physical_mitigation_best.pt
+model_tensorrt: models/tensorrt/qcar_physical_mitigation_reexport.engine
 dataset_yaml: configs/dataset/qcar.yaml
 stop_sign_label: stop_sign
 stopping_threshold_m: 0.8

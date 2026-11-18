@@ -1,5 +1,5 @@
 path: .
-train: data/training/images/train
-val: data/training/images/val
+train: data/physical_training/images/train
+val: data/physical_training/images/val
 nc: 5
 names: [obstacle_box, stop_sign, obstacle_bottle, traffic_light, car]
